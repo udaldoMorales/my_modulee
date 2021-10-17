@@ -1,0 +1,49 @@
+<odoo>
+
+	<!-- Form con campo Many2One de session_id -->
+	<!--
+	<record model="ir.ui.view" id="my_modulee_wizard_form">
+	    <field name="name">my_modulee_wizard.form</field>
+	    <field name="model">my_modulee.wizard</field>
+	    <field name="arch" type="xml">
+	        <form string="Add Attendees">
+	                <group>
+	                    <field name="session_id"/>
+	                    <field name="partner_ids"/>
+	                </group>
+   	                <button name="suscribe" string="Suscribe" type="object" icon="icon"/>
+	                <button special='cancel' string='Cancel'/>
+	        </form>
+	    </field>
+	</record>
+	-->
+
+	<!-- Form con campo Many2many de sessions_ids -->
+	<record model="ir.ui.view" id="my_modulee_wizard_form">
+	    <field name="name">my_modulee_wizard.form</field>
+	    <field name="model">my_modulee.wizard</field>
+	    <field name="arch" type="xml">
+	        <form string="Add Attendees">
+	                <group>
+	                    <field name="sessions_ids"/>
+	                    <field name="partner_ids"/>
+	                </group>
+	                <footer>
+	                <!--Agregando botones-->
+	                <button name="suscribe" string="Suscribe" type="object"/><!-- Name hace referencia a una función que ejecutará código -->
+	                <button special='cancel' string='Cancel'/>
+	            </footer>
+	        </form>
+	    </field>
+	</record>
+
+	<record id="my_modulee_launch_wizard_action" model="ir.actions.act_window">
+		<field name="name">Suscribir Entre Sesiones y Usuarios</field>
+		<field name="res_model">my_modulee.wizard</field>
+		<field name="view_mode">form</field>
+		<field name='target'>new</field>
+		<!--<field name='view_id' ref='my_modulee_wizard_form'/>-->
+		<field name='binding_model_id' ref='model_my_modulee_sessions' />
+	</record>
+
+</odoo>

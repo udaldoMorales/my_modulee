@@ -1,0 +1,341 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* my_modulee
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20210927\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-17 00:47+0000\n"
+"PO-Revision-Date: 2021-10-17 00:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.view_my_modulee_sessions_kanban
+msgid ""
+"<br/>\n"
+"                                    Start date:"
+msgstr ""
+
+#. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.view_my_modulee_sessions_kanban
+msgid ""
+"<br/>\n"
+"                                    duration:"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__active
+msgid "Active"
+msgstr ""
+
+#. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_wizard_form
+msgid "Add Attendees"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.ui.menu,name:my_modulee.my_modulee_courses_menu_act
+msgid "All Courses"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.ui.menu,name:my_modulee.my_modulee_sessions_menu_act
+msgid "All Sessions"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__atendees_ids
+msgid "Attendees"
+msgstr ""
+
+#. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_sessions_bar_graph
+msgid "Attendees per Session"
+msgstr ""
+
+#. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_wizard_form
+msgid "Cancel"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__color
+msgid "Color"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model,name:my_modulee.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__courses_id
+msgid "Course Id"
+msgstr ""
+
+#. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_Courses_form
+msgid "Course description"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.ui.menu,name:my_modulee.my_modulee_courses_menu
+msgid "Courses"
+msgstr ""
+
+#. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_courses_search
+msgid "Courses by Own User"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_courses__create_uid
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__create_uid
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_courses__create_date
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__create_date
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.view_my_modulee_sessions_kanban
+msgid "Delete"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_courses__description
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_Courses_form
+msgid "Description"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_courses__display_name
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__display_name
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_wizard__display_name
+#: model:ir.model.fields,field_description:my_modulee.field_res_partner__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__duration
+msgid "Duration (days)"
+msgstr ""
+
+#. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_courses_search
+msgid "Group By"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_courses__id
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__id
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_wizard__id
+#: model:ir.model.fields,field_description:my_modulee.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__instructor_id
+msgid "Instructor"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_res_partner__teacher_level1
+#: model:ir.model.fields,field_description:my_modulee.field_res_users__teacher_level1
+msgid "Is Teacher / Level 1"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_res_partner__teacher_level2
+#: model:ir.model.fields,field_description:my_modulee.field_res_users__teacher_level2
+msgid "Is Teacher / Level 2"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_res_partner__instructor
+#: model:ir.model.fields,field_description:my_modulee.field_res_users__instructor
+msgid "Is instructor"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_courses____last_update
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions____last_update
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_wizard____last_update
+#: model:ir.model.fields,field_description:my_modulee.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_courses__write_uid
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__write_uid
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_courses__write_date
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__write_date
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.ui.menu,name:my_modulee.my_module_sessions_wizard_menu
+msgid "Link Sessions And Attendees"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.ui.menu,name:my_modulee.my_modulee_menu_root
+msgid "My Modulee"
+msgstr ""
+
+#. module: my_modulee
+#: model:res.groups,name:my_modulee.group_manager
+msgid "My Modulee / Manager"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__name
+msgid "Name"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__atendees_num
+msgid "Number of Attendees"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__seats
+msgid "Number of Seats"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_wizard__partner_ids
+msgid "Partners Associated"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_courses__responsible_user_id
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_courses_search
+msgid "Responsible User"
+msgstr ""
+
+#. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_courses_search
+msgid "Search"
+msgstr ""
+
+#. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.view_my_modulee_sessions_kanban
+msgid "Session name:"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.ui.menu,name:my_modulee.my_modulee_sessions_menu
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_view_partner_form
+msgid "Sessions"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_wizard__sessions_ids
+msgid "Sessions Associated"
+msgstr ""
+
+#. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_Sessions_calendar
+msgid "Sessions Calendar"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_res_partner__sessions_ids
+#: model:ir.model.fields,field_description:my_modulee.field_res_users__sessions_ids
+msgid "Sessions by Partner"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_courses__sessions_ids
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_Courses_form
+msgid "Sessions depending"
+msgstr ""
+
+#. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_Courses_form
+msgid "Specific Course"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__start_date
+msgid "Start Date"
+msgstr ""
+
+#. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_wizard_form
+msgid "Suscribe"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.actions.act_window,name:my_modulee.my_modulee_launch_wizard_action
+msgid "Suscribir Entre Sesiones y Usuarios"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__percentage_taken_seats
+msgid "Taken Seats Percentage"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.constraint,message:my_modulee.constraint_my_modulee_courses_courses_title_uniq
+msgid "The course name must be unique!"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.fields,field_description:my_modulee.field_my_modulee_courses__title
+msgid "Title"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.constraint,message:my_modulee.constraint_my_modulee_courses_courses_different_title_description
+msgid "Title and description must be differents."
+msgstr ""
+
+#. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_Courses_tree
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_Sessions_tree
+msgid "description"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model,name:my_modulee.model_my_modulee_courses
+msgid "my_modulee.courses"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.actions.act_window,name:my_modulee.my_modulee_Courses_action
+msgid "my_modulee.courses.action"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model,name:my_modulee.model_my_modulee_sessions
+msgid "my_modulee.sessions"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.actions.act_window,name:my_modulee.my_modulee_Sessions_action
+msgid "my_modulee.sessions.action"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model,name:my_modulee.model_my_modulee_wizard
+msgid "my_modulee.wizard"
+msgstr ""

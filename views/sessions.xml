@@ -1,0 +1,118 @@
+<odoo>
+	<data>
+
+        <!-- Vista de árbol -->
+		<record model='ir.ui.view' id='my_modulee_Sessions_tree'>
+            <field name='name'>Sessions.tree</field>
+            <field name='model'>my_modulee.sessions</field>
+            <field name='arch' type='xml'>
+                <!-- <tree string='description'> -->
+                <!-- Edición de las tree views -->
+                <!-- &lt; es menor que y &gt es mayor que-->
+                <tree string='description' decoration-primary="duration&lt;5" decoration-danger='duration&gt;15'>
+                    <field name='name' width='100px'/>
+                    <field name='start_date' width='100px'/>
+                    <field name='duration' width='100px'/>
+                    <field name='seats' width='100px'/>
+                    <field name='instructor_id' width='100px'/>
+                    <field name='courses_id' width='100px'/>
+                    <field name='percentage_taken_seats' width='100px' widget='progressbar'/>
+                    <!--Falta agregar un formulario de sesiones-->
+                    <field name='active' width='30px'/>
+                    <field name='atendees_ids' width='100px'/>
+                    <!-- <field name='atendees_num' /> -->
+                    
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista de calendario -->
+        <record model='ir.ui.view' id='my_modulee_Sessions_calendar'>
+            <field name='name'>Sessions.calendar</field>
+            <field name='model'>my_modulee.sessions</field>
+            <field name='arch' type='xml'>
+                <calendar string='Sessions Calendar' date_start='start_date' color='instructor_id'>
+                    <field name='name'/>
+                </calendar>
+            </field>
+        </record>
+
+        <!-- Vista de gráfico (de barra) -->
+        <record model='ir.ui.view' id='my_modulee_sessions_bar_graph'>
+            <field name='name'>Sessions.graph</field>
+            <field name='model'>my_modulee.sessions</field>
+            <field name='arch' type='xml'>
+                <graph string='Attendees per Session'>
+                    <field name='name' type='row'/>
+                    <field name="atendees_num" type="measure" />
+                </graph>
+            </field>
+        </record>
+
+        <!-- Vista Kanban -->
+            <record model="ir.ui.view" id="view_my_modulee_sessions_kanban">
+            <field name="name">Sessions.kanban</field>
+            <field name="model">my_modulee.sessions</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="courses_id">
+                    <field name="color"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div
+                                    t-attf-class="oe_kanban_color_{{kanban_getcolor(record.color.raw_value)}}
+                                                  oe_kanban_global_click_edit oe_semantic_html_override
+                                                  oe_kanban_card {{record.group_fancy==1 ? 'oe_kanban_card_fancy' : ''}}">
+                                <div class="oe_dropdown_kanban">
+                                    <!-- dropdown menu -->
+                                    <div class="oe_dropdown_toggle">
+                                        <span class="oe_e">#</span>
+                                        <ul class="oe_dropdown_menu">
+                                            <li>
+                                                <a type="delete">Delete</a>
+                                            </li>
+                                            <li>
+                                                <ul class="oe_kanban_colorpicker"
+                                                    data-field="color"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="oe_clear"></div>
+                                </div>
+                                <div t-attf-class="oe_kanban_content">
+                                    <!-- title -->
+                                    Session name:
+                                    <field name="name"/>
+                                    <br/>
+                                    Start date:
+                                    <field name="start_date"/>
+                                    <br/>
+                                    duration:
+                                    <field name="duration"/>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="my_modulee_Sessions_action" model="ir.actions.act_window">
+            <field name="name">my_modulee.sessions.action</field>
+            <field name='type'>ir.actions.act_window</field>
+            <field name="res_model">my_modulee.sessions</field>
+            <!-- Incluyendo el calendario y el gráfico de barra y el kanban-->
+            <field name="view_mode">tree,form,calendar,graph,kanban</field>
+        </record>
+
+
+        <!-- Botón en el menú principal-->
+
+        <menuitem name="Sessions" id="my_modulee_sessions_menu" parent="my_modulee_menu_root" sequence="40"/>
+
+        <!-- Botón que aparece a la par del nombre "Open Academy 2", tiene un padre -->
+        <menuitem name="All Sessions" id="my_modulee_sessions_menu_act" parent="my_modulee_sessions_menu" action='my_modulee_Sessions_action' sequence="40"/>
+
+        <!-- menuitem than triggers the Wizard -->
+        <menuitem id="my_module_sessions_wizard_menu" name="Link Sessions And Attendees" parent="my_modulee_sessions_menu" action="my_modulee_launch_wizard_action" sequence="50"/>
+	</data>
+</odoo>

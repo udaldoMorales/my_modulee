@@ -1,0 +1,110 @@
+<odoo>
+    <data>
+        <!-- Datos de prueba -->
+        <record model="my_modulee.courses" id="courses0">
+        <field name='title'>Curso 1</field>
+        <field name="description">Este es el curso 1.</field>
+        <field name='responsible_user_id'>2</field>
+        </record>
+
+        <record model="my_modulee.courses" id="courses1">
+        <field name='title'>Curso 2</field>
+        <field name="description">Este es el curso 2.</field>
+        <field name='responsible_user_id'>2</field>
+        </record>
+
+        <!-- Vista de los cursos -->
+        <record model='ir.ui.view' id='my_modulee_Courses_tree'>
+            <field name='name'>Courses.tree</field>
+            <field name='model'>my_modulee.courses</field>
+            <field name='arch' type='xml'>
+                <tree string='description'>
+                    <field name='title'/>
+                    <field name='description'/>
+                    <field name='responsible_user_id'/>
+                    <field name='sessions_ids'/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Formulario para ver cada curso individual -->
+        <record model="ir.ui.view" id="my_modulee_Courses_form">
+            <field name="name">Courses.form</field>
+            <field name="model">my_modulee.courses</field>
+            <field name="arch" type="xml">
+                <form string="Course description">
+                    <header string='Specific Course'>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="title"/>
+                            <field name='responsible_user_id'/>
+                        </group>
+                        <notebook>
+                            <page string='Description'>
+                                <field name='description'/>
+                            </page>
+                            <page string='Sessions depending'>
+                                <field name='sessions_ids'/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--Búsqueda de inicio de "Building a Module" -->
+        <!--
+        <record id="my_modulee_courses_search" model="ir.ui.view">
+            <field name="name">my_modulee.courses.search</field>
+            <field name="model">my_modulee.courses</field>
+            <field name="arch" type="xml">
+                <search string="String">
+                    <field name="title"/>
+                    <field name='description'/>
+                </search>
+            </field>
+        </record>
+        -->
+
+        <!--Búsqueda con "search view" -->
+
+        <record id="my_modulee_courses_search" model="ir.ui.view">
+            <field name="name">my_modulee.courses.search</field>
+            <field name="model">my_modulee.courses</field>
+            <field name="arch" type="xml">
+                <search string="Search">
+                    
+                    <field name="title"/>
+                    <field name='description'/>
+
+                    <filter name='user_given_courses' string='Courses by Own User' domain='[("responsible_user_id", "=", uid)]'/> <!-- uid representa al usuario actual -->
+                    <group string='Group By'> <!-- Esto para tener en el Agrupar Por-->
+                        <filter name='responsible_user_id_group' string='Responsible User' context='{"group_by": "responsible_user_id"}'/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Acción de mostrar los cursos -->
+        <record id="my_modulee_Courses_action" model="ir.actions.act_window">
+            <field name="name">my_modulee.courses.action</field>
+            <field name='type'>ir.actions.act_window</field>
+            <field name="res_model">my_modulee.courses</field>
+            <field name="view_mode">tree,form</field>
+            <!-- Para referenciarlo con la búsqueda no por defecto -->
+            <field name='search_view_id' ref='my_modulee_courses_search'/>
+            <!-- Para establecer el filtro user_given_courses seleccionado por defecto -->
+            <field name='context' eval='{"search_default_user_given_courses": 1}' />
+        </record>
+
+        <!-- Botón en el menú principal-->
+        <menuitem name="My Modulee" id="my_modulee_menu_root" sequence="30"/>
+
+        <menuitem id="my_modulee_courses_menu" name="Courses" parent="my_modulee_menu_root"/>
+
+        <!-- Botón que aparece a la par del nombre "Open Academy 2", tiene un padre -->
+        <menuitem name="All Courses" id="my_modulee_courses_menu_act" parent="my_modulee_courses_menu" action='my_modulee_Courses_action' sequence="30"/>
+
+    </data>
+</odoo>

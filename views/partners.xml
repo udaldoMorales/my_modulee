@@ -1,0 +1,21 @@
+<odoo>
+
+	<record model='ir.ui.view' id='my_modulee_view_partner_form'>
+		<field name='name'>my_modulee.partners.form</field>
+		<field name='model'>res.partner</field>
+		<field name='inherit_id' ref='base.view_partner_form'/>
+		<field name='arch' type='xml'>
+			<xpath expr='//notebook/page[3]' position='after'>
+				<page string='Sessions'>
+					<group>
+						<field name="instructor"/>
+						<field name="teacher_level1"/>
+						<field name="teacher_level2"/>
+						<field name='sessions_ids'/>
+					</group>
+				</page>
+			</xpath>
+		</field>
+	</record>
+
+</odoo>

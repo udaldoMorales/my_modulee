@@ -1,0 +1,67 @@
+<!--Dashboard hecho como un formulario-->
+
+<odoo>
+
+	<data>
+
+		<!--Acciones para incluir dentro del dashboard de formulario-->
+		<record id="my_modulee_sessions_graph_action" model="ir.actions.act_window">
+			<field name="name">Number of attendees</field>
+			<field name="res_model">my_modulee.sessions</field>
+			<field name="view_mode">graph</field>
+			<field name='view_id' ref='my_modulee.my_modulee_sessions_bar_graph'/> <!--Se sigue en ref nomenclatura model.id-->
+		</record>
+
+		<record id="my_modulee_sessions_calendar_action" model="ir.actions.act_window">
+			<field name="name">Sessions Calendar</field>
+			<field name="res_model">my_modulee.sessions</field>
+			<field name="view_mode">calendar</field>
+			<field name='view_id' ref='my_modulee.my_modulee_Sessions_calendar'/> <!--Se sigue en ref nomenclatura model.id-->
+		</record>
+
+		<record id="my_modulee_courses_list_action" model="ir.actions.act_window">
+			<field name="name">Courses List</field>
+			<field name="res_model">my_modulee.courses</field>
+			<field name="view_mode">tree,form</field>
+			<field name='view_id' ref='my_modulee.my_modulee_Courses_tree'/> <!--Se sigue en ref nomenclatura model.id-->
+		</record>
+
+        <record model="ir.ui.view" id="my_modulee_dashboard_in_form">
+            <field name="name">Dashboard Form</field>
+            <field name="model">board.board</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Session Dashboard">
+                    <board style="2-1">
+                        <column>
+                            <action
+                                string="Number of Attendees"
+                                name="%(my_modulee_sessions_graph_action)d"
+                                height="150"
+                                width="300"/>
+                            <action
+                                string="Sessions Calendar"
+                                name="%(my_modulee_sessions_calendar_action)d"/>
+                        </column>
+                        <column>
+                            <action
+                                string="Courses List"
+                                name="%(my_modulee_courses_list_action)d"/>
+                        </column>
+                    </board>
+                </form>
+            </field>
+        </record>		
+
+		<record id="my_modulee_dashboard_form_action" model="ir.actions.act_window">
+			<field name="name">Dashboard Action</field>
+			<field name="res_model">board.board</field>
+			<field name="view_mode">form</field>
+			<field name='view_id' ref='my_modulee.my_modulee_dashboard_in_form'/> <!--Se sigue en ref nomenclatura model.id-->
+		</record>
+
+		<menuitem id="dashboard_form_menu" name="Dashboard" parent="my_modulee_menu_root" action="my_modulee_dashboard_form_action" sequence="1"/>
+
+	</data>
+
+</odoo>

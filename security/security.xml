@@ -1,0 +1,20 @@
+<odoo>
+
+	<record id='group_manager' model='res.groups'>
+		<field name='name'>My Modulee / Manager</field>
+	</record>
+
+	<record id='restrict_responsible_user_of_their_courses' model='ir.rule'>
+		<field name='name'>Only responsible users can edit his/her courses.</field>
+		<field name='model_id' ref='model_my_modulee_courses'/> <!-- Aquí se sigue el formato que está en el .csv, a él se hace referencia. -->
+		<field name='groups' eval='[(4, ref("my_modulee.group_manager"))]' /> <!-- Esto siguiendo sintaxis y ejemplo -->
+		<field name='perm_read' eval="0"/>
+		<field name='perm_write' eval='1'/>
+		<field name='perm_create' eval='0'/>
+		<field name='perm_unlink' eval='1'/>
+		<field name='domain_force'>['|', ('responsible_user_id', '=', False),('responsible_user_id','=',user.id)]</field>
+		<!-- False en vez de none por si no hay maestro responsable -->
+		<!-- Aquí sí se usa user.id, no entiendo por qué, pero es así -->
+	</record>
+
+</odoo>
