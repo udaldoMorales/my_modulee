@@ -26,11 +26,11 @@
         'security/security.xml',
         'security/ir.model.access.csv',
         'views/views.xml',
+        'views/wizard.xml',
         'views/templates.xml',
         'views/courses.xml',
         'views/sessions.xml',
         'views/partners.xml',
-        'views/wizard.xml',
         'reports/reports.xml',
         'reports/dashboard.xml'
     ],

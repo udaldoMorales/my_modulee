@@ -1,9 +1,9 @@
 import xmlrpc.client
 
-url = 'http://localhost:8069' 
-db = 'prueba53'
-username = 'admin'
-password = 'admin'
+url = 'http://localhost:8069' #Localhost y el puerto
+db = 'prueba53' #La base de datos que se use en ese momento.
+username = 'admin' #Usuario de Odoo
+password = 'admin' #Contraseña de usuario de odoo.
 
 #Conectarnos al servidor
 common = xmlrpc.client.ServerProxy('{}/xmlrpc/2/common'.format(url))
@@ -26,7 +26,7 @@ for x in res:
 #Obtener un course_id para la sesión a crear:
 course_id = (models.execute_kw(db, uid, password,
     'my_modulee.courses', 'search',
-    [[('title', 'ilike', '%curso 5%')]]))[0]
+    [[('title', 'ilike', '%curso 1%')]]))[0]
 
 #Crear la nueva sesión para el curso 5:
 models.execute_kw(db, uid, password,
