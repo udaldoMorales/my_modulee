@@ -109,7 +109,7 @@
 
         <menuitem name="Sessions" id="my_modulee_sessions_menu" parent="my_modulee_menu_root" sequence="40"/>
 
-        <!-- Botón que aparece a la par del nombre "Open Academy 2", tiene un padre -->
+        <!-- Botón que aparece a la par del nombre "My Modulee", tiene un padre -->
         <menuitem name="All Sessions" id="my_modulee_sessions_menu_act" parent="my_modulee_sessions_menu" action='my_modulee_Sessions_action' sequence="40"/>
 
         <!-- menuitem than triggers the Wizard -->

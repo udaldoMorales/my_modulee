@@ -30,7 +30,7 @@
 	                </group>
 	                <footer>
 	                <!--Agregando botones-->
-	                <button name="suscribe" string="Suscribe" type="object"/><!-- Name hace referencia a una función que ejecutará código -->
+	                <button name="suscribe" string="Suscribe" type="object"/><!-- Name hace referencia a una función que ejecutará código dentro del archivo .py del modelo.-->
 	                <button special='cancel' string='Cancel'/>
 	            </footer>
 	        </form>

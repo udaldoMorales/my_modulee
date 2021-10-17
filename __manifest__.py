@@ -3,11 +3,10 @@
     'name': "my_modulee",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        My Modulee, a module that replics the Open Academy tutorial module from Odoo.""",
 
     'description': """
-        Long description of module's purpose
+        In this module, we are capable to manage a course and sessions system.
     """,
 
     'author': "My Company",
