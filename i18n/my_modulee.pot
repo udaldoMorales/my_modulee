@@ -6,14 +6,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0-20210927\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-17 00:47+0000\n"
-"PO-Revision-Date: 2021-10-17 00:47+0000\n"
+"POT-Creation-Date: 2021-10-17 19:50+0000\n"
+"PO-Revision-Date: 2021-10-17 19:50+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: my_modulee
+#: code:addons/my_modulee/models/sessions.py:0
+#, python-format
+msgid " cannot be in his/her session as an attendee too."
+msgstr ""
 
 #. module: my_modulee
 #: model_terms:ir.ui.view,arch_db:my_modulee.view_my_modulee_sessions_kanban
@@ -60,6 +66,11 @@ msgid "Attendees per Session"
 msgstr ""
 
 #. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_sessions_report
+msgid "Attendees:"
+msgstr ""
+
+#. module: my_modulee
 #: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_wizard_form
 msgid "Cancel"
 msgstr ""
@@ -75,6 +86,12 @@ msgid "Contact"
 msgstr ""
 
 #. module: my_modulee
+#: code:addons/my_modulee/models/courses.py:0
+#, python-format
+msgid "Copy of "
+msgstr ""
+
+#. module: my_modulee
 #: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__courses_id
 msgid "Course Id"
 msgstr ""
@@ -87,6 +104,12 @@ msgstr ""
 #. module: my_modulee
 #: model:ir.ui.menu,name:my_modulee.my_modulee_courses_menu
 msgid "Courses"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.actions.act_window,name:my_modulee.my_modulee_courses_list_action
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_dashboard_in_form
+msgid "Courses List"
 msgstr ""
 
 #. module: my_modulee
@@ -106,6 +129,16 @@ msgstr ""
 #: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__create_date
 #: model:ir.model.fields,field_description:my_modulee.field_my_modulee_wizard__create_date
 msgid "Created on"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.ui.menu,name:my_modulee.dashboard_form_menu
+msgid "Dashboard"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.actions.act_window,name:my_modulee.my_modulee_dashboard_form_action
+msgid "Dashboard Action"
 msgstr ""
 
 #. module: my_modulee
@@ -130,6 +163,26 @@ msgstr ""
 #. module: my_modulee
 #: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__duration
 msgid "Duration (days)"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.constraint,message:my_modulee.constraint_my_modulee_courses_courses_title_uniq
+msgid "El nombre del curso debe ser único"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.model.constraint,message:my_modulee.constraint_my_modulee_courses_courses_different_title_description
+msgid "El título y la descripción deben ser diferentes."
+msgstr ""
+
+#. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_sessions_report
+msgid "For"
+msgstr ""
+
+#. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_sessions_report
+msgid "From"
 msgstr ""
 
 #. module: my_modulee
@@ -212,12 +265,18 @@ msgstr ""
 
 #. module: my_modulee
 #: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__atendees_num
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_dashboard_in_form
 msgid "Number of Attendees"
 msgstr ""
 
 #. module: my_modulee
 #: model:ir.model.fields,field_description:my_modulee.field_my_modulee_sessions__seats
 msgid "Number of Seats"
+msgstr ""
+
+#. module: my_modulee
+#: model:ir.actions.act_window,name:my_modulee.my_modulee_sessions_graph_action
+msgid "Number of attendees"
 msgstr ""
 
 #. module: my_modulee
@@ -237,6 +296,11 @@ msgid "Search"
 msgstr ""
 
 #. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_dashboard_in_form
+msgid "Session Dashboard"
+msgstr ""
+
+#. module: my_modulee
 #: model_terms:ir.ui.view,arch_db:my_modulee.view_my_modulee_sessions_kanban
 msgid "Session name:"
 msgstr ""
@@ -253,7 +317,9 @@ msgid "Sessions Associated"
 msgstr ""
 
 #. module: my_modulee
+#: model:ir.actions.act_window,name:my_modulee.my_modulee_sessions_calendar_action
 #: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_Sessions_calendar
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_dashboard_in_form
 msgid "Sessions Calendar"
 msgstr ""
 
@@ -286,7 +352,7 @@ msgstr ""
 
 #. module: my_modulee
 #: model:ir.actions.act_window,name:my_modulee.my_modulee_launch_wizard_action
-msgid "Suscribir Entre Sesiones y Usuarios"
+msgid "Suscribe Between Sessions and Attendees"
 msgstr ""
 
 #. module: my_modulee
@@ -295,8 +361,22 @@ msgid "Taken Seats Percentage"
 msgstr ""
 
 #. module: my_modulee
-#: model:ir.model.constraint,message:my_modulee.constraint_my_modulee_courses_courses_title_uniq
+#: code:addons/my_modulee/models/sessions.py:0
+#: code:addons/my_modulee/models/sessions.py:0
+#, python-format
+msgid "That's not possible"
+msgstr ""
+
+#. module: my_modulee
+#: code:addons/my_modulee/models/courses.py:0
+#, python-format
 msgid "The course name must be unique!"
+msgstr ""
+
+#. module: my_modulee
+#: code:addons/my_modulee/models/sessions.py:0
+#, python-format
+msgid "The instructor "
 msgstr ""
 
 #. module: my_modulee
@@ -305,8 +385,26 @@ msgid "Title"
 msgstr ""
 
 #. module: my_modulee
-#: model:ir.model.constraint,message:my_modulee.constraint_my_modulee_courses_courses_different_title_description
+#: code:addons/my_modulee/models/courses.py:0
+#, python-format
 msgid "Title and description must be differents."
+msgstr ""
+
+#. module: my_modulee
+#: code:addons/my_modulee/models/sessions.py:0
+#, python-format
+msgid "You cannot have a session with less than 0 persons."
+msgstr ""
+
+#. module: my_modulee
+#: code:addons/my_modulee/models/sessions.py:0
+#, python-format
+msgid "You cannot have more attendees than seats in a session."
+msgstr ""
+
+#. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_sessions_report
+msgid "days of duration."
 msgstr ""
 
 #. module: my_modulee
@@ -338,4 +436,9 @@ msgstr ""
 #. module: my_modulee
 #: model:ir.model,name:my_modulee.model_my_modulee_wizard
 msgid "my_modulee.wizard"
+msgstr ""
+
+#. module: my_modulee
+#: model_terms:ir.ui.view,arch_db:my_modulee.my_modulee_sessions_report
+msgid "with"
 msgstr ""

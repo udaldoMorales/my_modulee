@@ -1,9 +1,9 @@
 import xmlrpc.client
 
-url = '' #URL de conexión
-db = '' #Base de datos usándose
-username = '' #Credencial
-password = '' #Credencial de contraseña
+url = 'http://localhost:8069' 
+db = 'prueba53'
+username = 'admin'
+password = 'admin'
 
 #Conectarnos al servidor
 common = xmlrpc.client.ServerProxy('{}/xmlrpc/2/common'.format(url))

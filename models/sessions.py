@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 
 class Sessions(models.Model):
@@ -77,15 +77,15 @@ class Sessions(models.Model):
 		if (len(self.atendees_ids) > self.seats):
 			return {
 			'warning': {
-			'title': "That's not possible",
-			'message': 'You cannot have more attendees than seats in a session.'
+			'title': _("That's not possible"),
+			'message': _('You cannot have more attendees than seats in a session.')
 			}
 			}
 		elif (self.seats < 0):
 			return {
 			'warning': {
-			'title': "That's not possible",
-			'message': 'You cannot have a session with less than 0 persons.'
+			'title': _("That's not possible"),
+			'message': _('You cannot have a session with less than 0 persons.')
 			}
 			}
 
@@ -94,4 +94,4 @@ class Sessions(models.Model):
 	def _check_method(self):
 		for record in self: #Recorrer todos los registros
 			if (record.instructor_id in record.atendees_ids):
-				raise ValidationError('The instructor %s cannot be in his/her session as an attendee too.'%record.instructor_id.name)
+				raise ValidationError(_('The instructor ') + '%s'%record.instructor_id.name + _(' cannot be in his/her session as an attendee too.'))

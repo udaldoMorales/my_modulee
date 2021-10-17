@@ -38,7 +38,7 @@
 	</record>
 
 	<record id="my_modulee_launch_wizard_action" model="ir.actions.act_window">
-		<field name="name">Suscribir Entre Sesiones y Usuarios</field>
+		<field name="name">Suscribe Between Sessions and Attendees</field>
 		<field name="res_model">my_modulee.wizard</field>
 		<field name="view_mode">form</field>
 		<field name='target'>new</field>
