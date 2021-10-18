@@ -1,3 +1,5 @@
+##Programa de Python que se conecta a la API externa de Odoo para leer datos y escribir en ellos.
+
 import xmlrpc.client
 
 url = 'http://localhost:8069' #Localhost y el puerto
