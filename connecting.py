@@ -16,11 +16,12 @@ uid = common.authenticate(db, username, password, {})
 #Función para poder hacer los llamados
 models = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(url))
 
-#Guardando en una variable los modelos 
+#Guardando en una variable las sesiones 
 res = (models.execute_kw(db, uid, password,
     'my_modulee.sessions', 'search_read',
     []))
 
+#Imprimiendo los resultados
 for x in res:
 	print (x)
 	print("\n")
